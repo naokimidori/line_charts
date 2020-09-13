@@ -1,12 +1,24 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { renderWeekCharts } from './charts'
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  // }
+
+  componentDidMount() {
+    renderWeekCharts('container')
+  }
+
+  render() {
+    return (
+      <div className='wrapper'>
+        <canvas id="container"></canvas>
+      </div>
+    );
+  }
 }
 
 export default App;
